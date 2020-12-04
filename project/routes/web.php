@@ -19,9 +19,9 @@ Route::get('/', function () {
 });
 
 Route::resource('/books', 'App\Http\Controllers\BooksController');
-Route::get('/authors', 'App\Http\Controllers\AuthorsController@index');
 Route::get('/bookdetails/{id}', 'App\Http\Controllers\BooksController@show');
 Route::post('/bookdetails/{id}', 'App\Http\Controllers\BooksController@update');
-Route::get('/authordetails/{id}', 'App\Http\Controllers\AuthorsController@index');
+Route::get('/authors', 'App\Http\Controllers\AuthorsController@sortByName');
+Route::get('/authordetails/{id}', 'App\Http\Controllers\AuthorsController@showdetails');
 
 

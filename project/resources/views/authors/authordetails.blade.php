@@ -76,7 +76,7 @@
             </div>
         </div>
     <div class="form-group">
-        <a type="button" href="/books" class="btn btn-default btn-flat pull-left"></i> Return</a>
+        <a type="button" href="/authors" class="btn btn-default btn-flat pull-left"></i> Return</a>
     </div>
     </section>   
 

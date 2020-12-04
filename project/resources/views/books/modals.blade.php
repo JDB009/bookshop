@@ -30,7 +30,7 @@
                     <select name="authors_id" id="authors_id">
                       <option value="">--Select Author--</option>
                       @foreach($authors as $author)
-                        <option value={{$author->id}}> {{$author->initials}} {{$author->lastname}} </option>
+                        <option value={{$author->id}}>{{$author->lastname}}, {{$author->initials}}</option>
                       @endforeach
                     </select>
 

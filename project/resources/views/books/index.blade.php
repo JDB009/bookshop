@@ -40,7 +40,7 @@
                         <tr>
                             <td>{{ $book->isbn }}</td>
                             <td><a href='bookdetails/{{$book->id}}'>{{ $book->title }}</a></td>
-                            <td><a href='authordetails/{{$book->authors->id}}'>{{ $book->authors->initials }} {{$book->authors->lastname}}</td>
+                            <td>{{$book->authors->lastname}}, {{ $book->authors->initials }}</td>
                             <td>{{ $book->pages }}</td>
                         </tr>
                         @endforeach

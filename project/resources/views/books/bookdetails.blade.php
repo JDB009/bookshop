@@ -41,9 +41,9 @@
             <label for="bookValues">Author</label>
             <div>
                 <select name="newAuthor" id="newAuthor">
-                    <option value="{{ $updatebook->authors_id }}">{{$updatebook->authors->initials}} {{$updatebook->authors->lastname}}</option>
+                    <option value="{{ $updatebook->authors_id }}">{{$updatebook->authors->lastname}}, {{$updatebook->authors->initials}}</option>
                     @foreach($authors as $author)
-                    <option value="{{ $author->id }}">{{ $author->initials }} {{$author->lastname}}</option>
+                    <option value="{{ $author->id }}">{{$author->lastname}}, {{ $author->initials }}</option>
                     @endforeach
                 </select>
             </div>
