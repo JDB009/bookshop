@@ -1,4 +1,3 @@
-<!-- Add -->
 <form class="form-horizontal" method="POST" action="">
 <div class="modal fade" id="addnewUser">
     <div class="modal-dialog">
@@ -33,11 +32,7 @@
                         <option value={{$author->id}}>{{$author->lastname}}, {{$author->initials}}</option>
                       @endforeach
                     </select>
-
                   </div>
-                  <!-- <div class="col-sm-9">
-                      <input type="text" class="form-control" id="author" name="author" required>
-                  </div> -->
                 </div>
                 <div class="form-group">
                     <label for="voters_id" class="col-sm-3 control-label">Number of Pages</label>

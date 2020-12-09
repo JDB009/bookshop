@@ -8,12 +8,23 @@ use Illuminate\Http\Request;
 
 class AuthorsController extends Controller
 {
-    public function sortByName(){  
+    public function authorindex(){  
 
         $authors = Author::orderBy('lastname', 'ASC')->paginate(50);
+        $authorsAll = Author::all();
+        $booksAll = Book::all();
+
+        $avgAge = Author::avg('age');
+
+        $totalAuthors = count($authorsAll);
+        $totalBooks = count($booksAll);
+
+        $booksPerAuthor = $totalBooks/$totalAuthors;
 
         return view('authors.authors', [
             'authors' => $authors,
+            'avgAge' => $avgAge,
+            'booksPerAuthor' => $booksPerAuthor,
         ]);
     }
 

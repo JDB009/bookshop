@@ -14,7 +14,39 @@
     </section>
 
     <section class="content">
-      <div class="row">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-body">
+                    <table class="table table-bordered">
+                        <col style="width:25%"> 
+                        <col style="width:75%">
+                            <tr>
+                                <th>Average number of books written per author:</th>
+                                <td>{{ $booksPerAuthor }}</td>
+                            </tr>
+                        </table>
+                        <table class="table table-bordered">
+                        <col style="width:8%"> 
+                        <col style="width:92%"> 
+                            <tr>
+                                <th>Average age:</th>
+                                <td>{{ $avgAge }}</td>
+                            </tr>
+                        </table>
+                        <table class="table table-bordered">
+                        <col style="width:25%"> 
+                        <col style="width:75%"> 
+                            <tr>
+                                <th>Number of different countries of origin:</th>
+                                <td>1</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-xs-12">
             <div class="box">
                 <div class="box-body">

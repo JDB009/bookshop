@@ -27,19 +27,19 @@
                             <col style="width:90%"> 
                             <tbody>
                                 <tr>
-                                    <th>Initials:</td>
+                                    <th>Initials:</th>
                                     <td>{{$author->initials}}</td>
                                 </tr>
                                 <tr>
-                                    <th>Last Name:</td>
+                                    <th>Last Name:</th>
                                     <td>{{$author->lastname}}</td>
                                 </tr>
                                 <tr>
-                                    <th>Age</td>
+                                    <th>Age</th>
                                     <td>{{$author->age}}</td>
                                 </tr>
                                 <tr>
-                                    <th>Country</td>
+                                    <th>Country</th>
                                     <td>{{$author->country}}</td>
                                  </tr>
                             </tbody>
