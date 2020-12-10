@@ -19,27 +19,27 @@
                 <div class="box">
                     <div class="box-body">
                     <table class="table table-bordered">
-                        <col style="width:25%"> 
-                        <col style="width:75%">
+                        <col style="width:23%"> 
+                        <col style="width:72%">
                             <tr>
                                 <th>Average number of books written per author:</th>
                                 <td>{{ $booksPerAuthor }}</td>
                             </tr>
                         </table>
                         <table class="table table-bordered">
-                        <col style="width:8%"> 
-                        <col style="width:92%"> 
+                        <col style="width:14%"> 
+                        <col style="width:86%"> 
                             <tr>
-                                <th>Average age:</th>
+                                <th>Average age of authors:</th>
                                 <td>{{ $avgAge }}</td>
                             </tr>
                         </table>
                         <table class="table table-bordered">
-                        <col style="width:25%"> 
-                        <col style="width:75%"> 
+                        <col style="width:23%"> 
+                        <col style="width:72%"> 
                             <tr>
                                 <th>Number of different countries of origin:</th>
-                                <td>1</td>
+                                <td>{{ $uniqueCountries }}</td>
                             </tr>
                         </table>
                     </div>

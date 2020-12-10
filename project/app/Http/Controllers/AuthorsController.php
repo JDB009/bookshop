@@ -13,8 +13,9 @@ class AuthorsController extends Controller
         $authors = Author::orderBy('lastname', 'ASC')->paginate(50);
         $authorsAll = Author::all();
         $booksAll = Book::all();
-
         $avgAge = Author::avg('age');
+        $allCountries = Author::all('country')->unique('country');
+        $uniqueCountries = count($allCountries);
 
         $totalAuthors = count($authorsAll);
         $totalBooks = count($booksAll);
@@ -25,6 +26,7 @@ class AuthorsController extends Controller
             'authors' => $authors,
             'avgAge' => $avgAge,
             'booksPerAuthor' => $booksPerAuthor,
+            'uniqueCountries' => $uniqueCountries,
         ]);
     }
 
