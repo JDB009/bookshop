@@ -14,12 +14,12 @@ class AuthorsController extends Controller
         $authorsAll = Author::all();
         $booksAll = Book::all();
         $avgAge = Author::avg('age');
+
         $allCountries = Author::all('country')->unique('country');
         $uniqueCountries = count($allCountries);
 
         $totalAuthors = count($authorsAll);
         $totalBooks = count($booksAll);
-
         $booksPerAuthor = $totalBooks/$totalAuthors;
 
         return view('authors.authors', [
@@ -33,7 +33,7 @@ class AuthorsController extends Controller
 
     public function showdetails($id){
         
-        $books = Book::where('authors_id', $id)->get();
+        $books = Book::where('author_id', $id)->get();
         $author = Author::find($id);
         
         return view('authors.authordetails', [

@@ -26,10 +26,10 @@
 
                   <label for="lastname" class="col-sm-3 control-label">Author</label>
                   <div class="form col-sm-9">
-                    <select name="authors_id" id="authors_id">
+                    <select name="author_id" id="author_id">
                       <option value="">--Select Author--</option>
                       @foreach($authors as $author)
-                        <option value={{$author->id}}>{{$author->lastname}}, {{$author->initials}}</option>
+                        <option value={{ $author->id }}>{{$author->lastname}}, {{$author->initials}}</option>
                       @endforeach
                     </select>
                   </div>

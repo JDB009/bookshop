@@ -10,10 +10,9 @@ class BooksController extends Controller
 {
     public function index(){
 
-        $books = Book::orderBy('title', 'ASC')->paginate(50);
+        $books = Book::orderBy('title', 'ASC')->paginate(10);
         $authors = Author::all();
 
-        
         return view('books.index', [
             'books' => $books,
             'authors' => $authors,
@@ -24,12 +23,12 @@ class BooksController extends Controller
 
     public function show($id){
 
-        $authors = Author::all();
+        $author = Author::all();
         $updatebook = Book::find($id);
         
         return view('books.bookdetails', [
             'updatebook' => $updatebook, 
-            'authors' => $authors,
+            'author' => $author,
         ]);
 
     }
@@ -41,7 +40,7 @@ class BooksController extends Controller
 
         $updatebook->isbn = request('newISBN');
         $updatebook->title = request('newTitle');
-        $updatebook->authors_id = request('newAuthor');
+        //$updatebook->id = request('newAuthor');
         $updatebook->pages = request('newPages');
 
         $updatebook->save();
@@ -56,7 +55,7 @@ class BooksController extends Controller
 
         $books->isbn = request('isbn');
         $books->title = request('title');
-        $books->authors_id = request('authors_id');
+        $books->author_id = request('author_id');
         $books->pages = request('pages');
 
         $books->save();

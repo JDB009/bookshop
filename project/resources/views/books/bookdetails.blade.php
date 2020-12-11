@@ -29,25 +29,29 @@
             <label for="bookValues">ISBN:</label>
             <input type="text" class="form-control" id="newISBN" name="newISBN" value="{{ $updatebook->isbn }}" required>
         </div>
+        
         <div class="form-group">
             <label for="bookValues">Title:</label>
             <input type="text" class="form-control" id="newTitle" name="newTitle" value="{{ $updatebook->title }}" required>
         </div>
+
         <div class="form-group">
             <label for="bookValues">Number of Pages:</label>
             <input type="text" class="form-control" id="newPages" name="newPages" value="{{ $updatebook->pages }}" required="">
         </div>
+
         <div class="form-group">
             <label for="bookValues">Author</label>
             <div>
                 <select name="newAuthor" id="newAuthor">
-                    <option value="{{ $updatebook->authors_id }}">{{$updatebook->authors->lastname}}, {{$updatebook->authors->initials}}</option>
-                    @foreach($authors as $author)
-                    <option value="{{ $author->id }}">{{$author->lastname}}, {{ $author->initials }}</option>
+                    <option value="{{ $updatebook->id }}">{{$updatebook->author->lastname}}, {{$updatebook->author->initials}}</option>
+                    @foreach($author as $authors)
+                    <option value="{{ $authors->id }}">{{$authors->lastname}}, {{ $authors->initials }}</option>
                     @endforeach
                 </select>
             </div>
         </div>
+
         <div class="form-group">
             <button type="submit" class="btn btn-primary btn-flat" name="add"><i class="fa fa-save"></i> Save</button>
         </div>
