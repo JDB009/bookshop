@@ -79,7 +79,6 @@
     <div class="form-group">
         <a type="button" href="/authors" class="btn btn-default btn-flat pull-left"></i> Return</a>
     </div>
-    </section>   
-
+    </section>
   </div>
 @endsection

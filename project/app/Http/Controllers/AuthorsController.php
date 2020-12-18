@@ -13,14 +13,14 @@ class AuthorsController extends Controller
         $authors = Author::orderBy('lastname', 'ASC')->paginate(50);
         $authorsAll = Author::all();
         $booksAll = Book::all();
-        $avgAge = Author::avg('age');
+        $avgAge = round(Author::avg('age'),2);
 
         $allCountries = Author::all('country')->unique('country');
         $uniqueCountries = count($allCountries);
 
         $totalAuthors = count($authorsAll);
         $totalBooks = count($booksAll);
-        $booksPerAuthor = $totalBooks/$totalAuthors;
+        $booksPerAuthor = round($totalBooks/$totalAuthors,2);
 
         return view('authors.authors', [
             'authors' => $authors,
@@ -29,7 +29,6 @@ class AuthorsController extends Controller
             'uniqueCountries' => $uniqueCountries,
         ]);
     }
-
 
     public function showdetails($id){
         

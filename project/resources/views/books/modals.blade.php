@@ -17,13 +17,11 @@
                 </div>
                 <div class="form-group">
                     <label for="lastname" class="col-sm-3 control-label">Title</label>
-
                     <div class="col-sm-9">
                       <input type="text" class="form-control" id="title" name="title" required>
                     </div>
                 </div>
                 <div class="form-group">
-
                   <label for="lastname" class="col-sm-3 control-label">Author</label>
                   <div class="form col-sm-9">
                     <select name="author_id" id="author_id">
@@ -36,7 +34,6 @@
                 </div>
                 <div class="form-group">
                     <label for="voters_id" class="col-sm-3 control-label">Number of Pages</label>
-
                     <div class="col-sm-9">
                       <input type="text" class="form-control" id="pages" name="pages" required>
                     </div>

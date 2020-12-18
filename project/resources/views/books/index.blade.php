@@ -3,25 +3,19 @@
 <div class="content-wrapper">
 
     <section class="content-header">
-        
         <h1>Books</h1>
-        
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
             <li class="active">Authors</li>
         </ol>
-    
     </section>
-
     <section class="content">
-
       @if ($message = Session::get('success'))
             <div class="alert alert-success">
                 <p>{{ $message }}</p>
             </div>
       @endif
-      
-      <div class="row">
+        <div class="row">
             <div class="col-xs-12">
             <div class="box">
                 <div class="box-header with-border">
@@ -49,8 +43,9 @@
                 </div>
             </div>
         </div>
-        {{ $books->links() }}
-        @include('books.modals')
+    </div>
+    {{ $books->links() }}
+    @include('books.modals')
     </section>   
 </div>
 @endsection
